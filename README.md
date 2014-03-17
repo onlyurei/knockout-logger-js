@@ -3,7 +3,7 @@ knockout-logger-js
 
 A logger that can be displayed on the page and/or in the console.
 
-Why not using the native console in the browsers?
+A couple scenarios that this widget can be useful:
 <ul>
    <li>You don't want your logs to appear in the console in production.</li> 
    <li>You want to keep the useful logging code in the code base.</li>
