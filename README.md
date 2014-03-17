@@ -5,13 +5,13 @@ A logger that can be displayed on the page and/or in the console.
 
 Dependencies:
 
-KnockoutJS - http://knockoutjs.com/
+KnockoutJS (2.2.0+) - http://knockoutjs.com/
 
-SugarJS - http://sugarjs.com/
+SugarJS (1.4.0+) - http://sugarjs.com/
 
-RequireJS - http://requirejs.org/
+RequireJS (2.0.0+) - http://requirejs.org/
 
-Bootstrap - http://getbootstrap.com/
+Bootstrap (3.0.0+) - http://getbootstrap.com/
 
 Signature of Storage:
 
