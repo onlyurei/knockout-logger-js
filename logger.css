@@ -1,5 +1,9 @@
-/* ====================================[ Logger ]==================================== */
-
+/**
+ * @license Knockout-Logger-JS 1.0.0 Copyright (c) 2014, Cheng Fan.
+ * Available via the MIT license.
+ * see: http://github.com/onlyurei/knockout-logger-js for details
+ */
+ 
 .logger {
     background-color: #FFF;
     font-family: Menlo, Monaco, "Lucida Console", monospace;
