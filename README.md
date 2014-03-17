@@ -41,7 +41,7 @@ Turn on/off the logger on the page/in the console by adding the following query 
    <li>Storage
 </ul>
 
-Signature of Storage:
+Interface of Storage:
 
         /**
          * Get a key/value pair from storage
