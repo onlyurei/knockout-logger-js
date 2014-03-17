@@ -1,9 +1,9 @@
 knockout-logger-js
 ==================
 
-<h1>A logger that can be displayed on the page and/or in the console.</h1>
+<strong>A logger that can be displayed on the page and/or in the console.</strong>
 
-A couple scenarios that this widget can be useful:
+<h1>Scenarios that this widget can be useful:</h1>
 <ul>
    <li>You don't want your logs to appear in the console in production.</li> 
    <li>You want to keep the useful logging code in the code base.</li>
