@@ -1,3 +1,9 @@
+/**
+ * @license Knockout-Logger-JS 1.0.0 Copyright (c) 2014, Cheng Fan.
+ * Available via the MIT license.
+ * see: http://github.com/onlyurei/knockout-logger-js for details
+ */
+
 define(['Storage', 'Knockout', 'Sugar'], function (Storage, ko) {
 
     var storageKeys = {
