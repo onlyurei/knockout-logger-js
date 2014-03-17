@@ -9,6 +9,14 @@ knockout-logger-js
    <li>You want to keep the useful logging code in the code base.</li>
    <li>You don't want the logs to slow down the app (use a function as logFactory in this case).</li>
    <li>You want to see logs where they are not easy to be seen, e.g. on mobile devices.</li>
+   <li>
+      You want a more rich and convenient UI than the native browser console that can do the following and more:
+      <ul>
+         <li>Timestamping</li>
+         <li>Grouping/filtering/searching</li>
+         <li>Logs kept after page refresh</li>
+      </ul>
+   </li>
 </ul>
 
 <h1>Usage</h1> 
