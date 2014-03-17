@@ -8,7 +8,7 @@ Why not using the native console in the browsers?
    <li>You don't want your logs to appear in the console in production.</li> 
    <li>You want to keep the useful logging code in the code base.</li>
    <li>You don't want the logs to slow down the app (use a function as logFactory in this case).</li>
-   <li>You want to see logs where they are not easy to be seen, e.g. on mobile devices.</li>i
+   <li>You want to see logs where they are not easy to be seen, e.g. on mobile devices.</li>
 </ul>
 
 Usage (assuming the variable name loaded from Require is 'Logger'):
