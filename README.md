@@ -3,6 +3,25 @@ knockout-logger-js
 
 A logger that can be displayed on the page and/or in the console.
 
+Why not using the native console in the browsers?
+<ul>
+   <li>You don't want your logs to appear in the console in production.</li> 
+   <li>You want to keep the useful logging code in the code base.</li>
+   <li>You don't want the logs to slow down the app (use a function as logFactory in this case).</li>
+   <li>You want to see logs where they are not easy to be seen, e.g. on mobile devices.</li>i
+</ul>
+
+Usage (assuming the variable name loaded from Require is 'Logger'):
+
+<code>Logger.debug(logGroupName, logFactory(string|function))</code>: output a debug log.<br />
+<code>Logger.log(logGroupName, logFactory(string|function))</code>: output a regular log.<br />
+<code>Logger.warn(logGroupName, logFactory(string|function))</code>: output a warn log.<br />
+<code>Logger.error(logGroupName, logFactory(string|function))</code>: output an error log.<br />
+
+Turn on/off the logger on the page/in the console by adding the following query string params to the url and refreshing the page:
+<code>?logger=[true|false]&console=[true|false]</code>
+
+
 Dependencies:
 
 KnockoutJS (2.2.0+) - http://knockoutjs.com/
