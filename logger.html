@@ -1,0 +1,54 @@
+<div class="logger">
+    <div class="clearfix logger-controls">
+        <div class="pull-left">
+            <div class="btn-group">
+                <button data-bind="click: function () { levelFilters([]); }, enable: levelFilters().length"
+                        class="btn btn-default btn-xs btn-fixed-tiny">All</button>
+            </div>
+            <div data-bind="foreach: levels()" class="btn-group">
+                <button data-bind="text: $data.capitalize(),
+                               css: { 'btn-info': (!$parent.levelFilters().length || $parent.levelFilters().any($data)) && $data == 'debug',
+                                      'text-info': !(!$parent.levelFilters().length || $parent.levelFilters().any($data)) && $data == 'debug',
+                                      'btn-inverse': (!$parent.levelFilters().length || $parent.levelFilters().any($data)) && $data == 'log',
+                                      'btn-warning': (!$parent.levelFilters().length || $parent.levelFilters().any($data)) && $data == 'warn',
+                                      'text-warning': !(!$parent.levelFilters().length || $parent.levelFilters().any($data)) && $data == 'warn',
+                                      'btn-danger': (!$parent.levelFilters().length || $parent.levelFilters().any($data)) && $data == 'error',
+                                      'text-important': !(!$parent.levelFilters().length || $parent.levelFilters().any($data)) && $data == 'error' },
+                               click: function () { $parent.toggleFilter($parent.levelFilters, $data); }"
+                        class="btn btn-default bold btn-xs btn-fixed"></button>
+            </div>
+        </div>
+        <div class="pull-right">
+            <input data-bind="value: logFilter, valueUpdate: 'input'" type="search" class="compact-input" placeholder="Search" />&nbsp;&nbsp;
+            <label class="inline-block"><input data-bind="checked: timestamp" type="checkbox" />&nbsp;Timestamp</label>&nbsp;&nbsp;
+            <label class="inline-block"><input data-bind="checked: persist" type="checkbox" />&nbsp;Persist</label>&nbsp;&nbsp;
+            <label class="inline-block"><input data-bind="checked: reverse" type="checkbox" />&nbsp;Reverse</label>&nbsp;&nbsp;
+            <label class="inline-block"><input data-bind="checked: autoScroll, enable: !reverse()" type="checkbox" />&nbsp;Auto scroll</label>&nbsp;&nbsp;
+            <div class="btn-group">
+                <button data-bind="click: selectLogs" class="btn btn-default btn-xs btn-fixed">Select</button>
+                <button data-bind="click: function () { var _logs = logs(); _logs.remove(function (i) { return filteredLogs().any(i); }); logs(_logs); }"
+                        class="btn btn-default btn-xs btn-fixed-small">
+                    Clear
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="logger-groups">
+        <div class="btn-group">
+            <button data-bind="click: function () { groupFilters([]); }, enable: groupFilters().length"
+                    class="btn btn-default btn-xs btn-fixed-tiny" >All</button>
+        </div>
+        <div data-bind="foreach: groups()" class="btn-group">
+            <button class="btn btn-default btn-xs"
+                    data-bind="text: $data, css: { bold: !$parent.groupFilters().length || $parent.groupFilters().any($data) }, click: function () { $parent.toggleFilter($parent.groupFilters, $data); }"></button>
+        </div>
+    </div>
+    <div data-bind="attr: { id: id }" class="logger-logs">
+        <ol data-bind="foreach: filteredLogs()">
+            <li data-bind="css: { 'text-info': level == 'debug', 'text-warning': level == 'warn', 'text-important': level == 'error' }">
+                <i data-bind="text: timestamp, visible: $parent.timestamp"></i>&nbsp;<strong data-bind="text: group"></strong>:&nbsp;<span
+                    data-bind="text: log"></span>
+            </li>
+        </ol>
+    </div>
+</div>
