@@ -6,7 +6,9 @@ A logger that can be displayed on the page and/or in the console.
 Dependencies:
 
 KnockoutJS - http://knockoutjs.com/
+
 SugarJS - http://sugarjs.com/
+
 RequireJS - http://requirejs.org/
 
 Bootstrap - http://getbootstrap.com/
