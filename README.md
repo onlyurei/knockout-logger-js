@@ -1,7 +1,7 @@
 knockout-logger-js
 ==================
 
-A logger that can be displayed on the page and/or in the console.
+<h1>A logger that can be displayed on the page and/or in the console.</h1>
 
 A couple scenarios that this widget can be useful:
 <ul>
@@ -11,7 +11,8 @@ A couple scenarios that this widget can be useful:
    <li>You want to see logs where they are not easy to be seen, e.g. on mobile devices.</li>
 </ul>
 
-Usage (assuming the variable name loaded from Require is 'Logger'):
+<h1>Usage</h1> 
+(assuming the variable name loaded from Require is 'Logger'):
 
 <code>Logger.debug(logGroupName, logFactory(string|function))</code>: output a debug log.<br />
 <code>Logger.log(logGroupName, logFactory(string|function))</code>: output a regular log.<br />
@@ -22,15 +23,15 @@ Turn on/off the logger on the page/in the console by adding the following query 
 <code>?logger=[true|false]&console=[true|false]</code>
 
 
-Dependencies:
+<h1>Dependencies:</h1>
 
-KnockoutJS (2.2.0+) - http://knockoutjs.com/
-
-SugarJS (1.4.0+) - http://sugarjs.com/
-
-RequireJS (2.0.0+) - http://requirejs.org/
-
-Bootstrap (3.0.0+) - http://getbootstrap.com/
+<ul>
+   <li>KnockoutJS (2.2.0+) - http://knockoutjs.com/</li>
+   <li>SugarJS (1.4.0+) - http://sugarjs.com/</li>
+   <li>RequireJS (2.0.0+) - http://requirejs.org/</li>
+   <li>Bootstrap (3.0.0+) - http://getbootstrap.com/</li>
+   <li>Storage
+</ul>
 
 Signature of Storage:
 
