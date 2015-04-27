@@ -40,33 +40,3 @@ Turn on/off the logger on the page/in the console by adding the following query 
    <li>Bootstrap (3.0.0+) - http://getbootstrap.com/</li>
    <li>Storage
 </ul>
-
-Interface of Storage:
-
-        /**
-         * Get a key/value pair from storage
-         * @param {String} key Name of the item to be retrieved
-         * @param {Boolean=true} permanent If true, uses local storage instead of session storage (optional)
-         */
-        get: function (key, permanent) {}
-        
-        /**
-         * Set a key/value pair to storage
-         * @param {String} key Name of the item to be set
-         * @param {Object} value JSON object representing the data to be stored
-         * @param {Boolean=true} permanent If true, uses local storage instead of session storage (optional)
-         */
-        set: function (key, value, permanent) {}
-        
-        /**
-         * Removes an item from storage
-         * @param {String} key Name of the item to be removed
-         * @param {Boolean=true} permanent If true, uses local storage instead of session storage (optional)
-         */
-        remove: function (key, permanent) {}
-        
-        /**
-         * Clears items from storage
-         * @param {Boolean=true} permanent If true, uses local storage instead of session storage (optional)
-         */
-        clear: function (permanent) {}
