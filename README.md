@@ -1,7 +1,7 @@
 knockout-logger-js
 ==================
 
-<strong>A logger that can be displayed on the page and/or in the console.</strong>
+A logger that can be displayed on the page and/or in the console on any device.
 
 <h1>Scenarios that this widget can be useful:</h1>
 <ul>
